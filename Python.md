@@ -12,7 +12,7 @@ output: expression `e**2`
 
 variable: `e`   
 
-predicate: 'if type(e) == types.Int'   
+predicate: `if type(e) == types.Int`          
 
 
 
