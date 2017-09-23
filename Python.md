@@ -8,7 +8,7 @@ use `os.sep` instead of '/' in OS X or '\\' in windows.
 
 >e**2 for e in a_list if type(e) == types.Int`
 
-output: expression `e**2`
-variable: `e`
-predicate: 'if type(e) == types.Int'
+output: expression `e**2` .
+variable: `e` .
+predicate: 'if type(e) == types.Int' .
 
