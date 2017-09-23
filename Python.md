@@ -19,7 +19,7 @@ predicate: 'if type(e) == types.Int'
 ### Formularize print
 
 > sale.statement = '{} bought a cuppa tea.'
-  sale.record = {'person':'Ryan'}
+  sale.record = {'person':'Ryan'} \n
   print (sale.statement.format(sale.record['person']))
   
 It turns out `Ryan bought a cuppa tea.`   
