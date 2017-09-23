@@ -4,6 +4,7 @@
 ### File directory character in different operational systems
 use `os.sep` instead of '/' in OS X or '\\' in Windows.
 
+
 ### List comprehension
 
     e**2 for e in a_list if type(e) == types.Int`
@@ -23,3 +24,13 @@ predicate: `if type(e) == types.Int`
     print (sale.statement.format(sale.record['person']))    
   
 It turns out `Ryan bought a cuppa tea.`   
+
+
+### String variable
+String objects are immutable. 
+We can use StringVar() to initialize a String variable which is more flexible. It provides accessible methods like set() and get().
+
+    string_variable = StringVar()
+    
+    
+
