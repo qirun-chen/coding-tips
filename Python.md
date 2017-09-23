@@ -2,7 +2,7 @@
 
 
 ### File directory character in different operational systems
-use `os.sep` instead of '/' in OS X or '\\' in windows.
+use `os.sep` instead of '/' in OS X or '\\' in Windows.
 
 ### List comprehension
 
