@@ -15,6 +15,13 @@ variable: `e`
 
 predicate: `if type(e) == types.Int`          
 
+Eg
+use list comprehension to deal with dictionay objects
+
+    eg_dict = {k: v for k, v in eg_dict.iteritems() if v == 4}
+use ':' operator to add a pair of (key,value) into a dictionary
+
+This syntaxtic sugar looks like a sentence in English. A pythonic way.
 
 
 ### Formularize print
