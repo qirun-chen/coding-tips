@@ -40,8 +40,8 @@ We can use StringVar() to initialize a String variable which is more flexible. I
     string_variable = StringVar()
     
 ### Start a local server
-cd your target directory, and then `python -m http.server 8082`.
-open your broswer, input http://localhost:8082/, and now you get access to files in the directory.
-use when your program has to get access to the local files. for example, Js code in html needs to open the local csv files.
+Cd your target directory, and then `python -m http.server 8082`.
+Open your broswer, input http://localhost:8082/, and now you get access to files in the directory.
+Use when your program has to get access to the local files. For example, Js code in html needs to open the local csv files.
  
 
