@@ -1,4 +1,4 @@
-## python tips
+## Python tips
 
 
 ### File directory character in different operational systems
