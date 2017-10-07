@@ -66,4 +66,4 @@ Use objectSpace to inspect objects during runtime.
 	=> #<Enumerator: ObjectSpace:each_object(["a", "b", "a1", "c"])>
 
 ### chomp 
-Chomp takes care of control characters at the end, like '\n'. Eg. `"abc\n".chomp`. Chomp could eat the '\n' at the end of the string.
+Chomp takes care of control characters at the end, like '\n'. Eg. `"abc\n".chomp`. Chomp could eat the `\n` at the end of the string.
