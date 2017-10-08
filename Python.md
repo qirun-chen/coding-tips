@@ -2,7 +2,8 @@
 
 
 ### File directory character in different operational systems
-use `os.sep` instead of '/' in OS X or '\\' in Windows.
+use `os.sep` instead of `/` in OS X or `\\` in Windows.
+`os.getcwd()` to get current directory
 
 
 ### List comprehension
@@ -23,6 +24,10 @@ use ':' operator to add a pair of (key,value) into a dictionary
 
 This syntaxtic sugar looks like a sentence in English. A pythonic way.
 
+### List to String
+	list = ['1', '2', '3']
+	str1 = ''.join(list1)
+	str1 = ''.join(str(e) for e in list1)
 
 ### Formularize print
 
