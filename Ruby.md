@@ -103,7 +103,7 @@ Use objectSpace to inspect objects during runtime.
 
 #### chomp 
 
-Chomp takes care of control characters at the end, like '\n'. Eg. `"abc\n".chomp`. Chomp could eat the `\n` at the end of the string.
+Chomp takes care of control characters at the end, like `\n`. Eg. `"abc\n".chomp`. Chomp could eat the `\n` at the end of the string.
 
 #### concat
 Use concat to append a substring to the end of the string, and it will do assignment. In other languages, it is also an elegant way.
@@ -153,5 +153,6 @@ Splat gathers all elements into an array. `*`
 
 #### Assign parameters in command-line interface
 ARGV is like an I/O splat
+
 	$ ruby reader.rb a.csv b.csv c.csv
 	# ARGV = ["a.csv", "b.csv", "c.csv"] 
