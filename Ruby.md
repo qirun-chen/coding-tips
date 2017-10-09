@@ -26,12 +26,12 @@ NOTE − In Ruby, CAN access value of any variable or constant by putting a hash
 
 ### The relationship between Ruby Variables
 
-((((a_val ) @b ) @@c ) $d)
-scope: 
-	a_val -> local
-	@b    -> within instance
-	@@c   -> within class
-	$d    -> application wide
+	((((a_val ) @b ) @@c ) $d)
+	scope: 
+		a_val -> local
+		@b    -> within instance
+		@@c   -> within class
+		$d    -> application wide
 	
 -------------------------------------------------------------------------------------------------------------------------------------------
 
