@@ -36,7 +36,10 @@ This syntaxtic sugar looks like a sentence in English. A pythonic way.
     print (sale.statement.format(sale.record['person']))    
   
 It turns out `Ryan bought a cuppa tea.`   
-
+#### format to take certain number of characters
+    print("%s" % (format('x', '^20')
+It means `x` takes space of 20 characters.
+`^` can make it centered. `<` => align left. `>` => align right.
 
 ### String variable
 String objects are immutable. 
@@ -51,4 +54,14 @@ Use when your program has to get access to the local files. For example, Js code
 
 ### Accuracy of float
 	float（'%.4f' % float_variable）
+
+### has_key() or in
+Python 3 has removed has_key() of the dictionary object. Use in instead.
+
+### I/O
+When reading a file, it may lead to some encodeing problems.
+The best way to avoid this problem is to assign encodeing parameter with specific value like 'utf-8' when opening the file.
+    
+    raw_text = open(os.getcwd() + os.sep + file_name, encoding='utf-8').read()
+
 
