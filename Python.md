@@ -10,11 +10,11 @@ use `os.sep` instead of `/` in OS X or `\\` in Windows.
 
     e**2 for e in a_list if type(e) == types.Int`
 
-output: expression `e**2`  
+output: expression `e**2`
 
-variable: `e`   
+variable: `e`
 
-predicate: `if type(e) == types.Int`          
+predicate: `if type(e) == types.Int`
 
 Eg
 use list comprehension to deal with dictionay objects
@@ -31,22 +31,22 @@ This syntaxtic sugar looks like a sentence in English. A pythonic way.
 
 ### Formularize print
 
-    sale.statement = '{} bought a cuppa tea.'   
-    sale.record = {'person':'Ryan'}     
-    print (sale.statement.format(sale.record['person']))    
-  
-It turns out `Ryan bought a cuppa tea.`   
+    sale.statement = '{} bought a cuppa tea.'
+    sale.record = {'person':'Ryan'}
+    print (sale.statement.format(sale.record['person']))
+
+It turns out `Ryan bought a cuppa tea.`
 #### format to take certain number of characters
     print("%s" % (format('x', '^20')
 It means `x` takes space of 20 characters.
 `^` can make it centered. `<` => align left. `>` => align right.
 
 ### String variable
-String objects are immutable. 
+String objects are immutable.
 We can use StringVar() to initialize a String variable which is more flexible. It provides accessible methods like set() and get().
 
     string_variable = StringVar()
-    
+
 ### Start a local server
 Cd your target directory, and then `python -m http.server 8082`.
 Open your broswer, input http://localhost:8082/, and now you get access to files in the directory.
@@ -61,7 +61,7 @@ Python 3 has removed has_key() of the dictionary object. Use in instead.
 ### I/O
 When reading a file, it may lead to some encodeing problems.
 The best way to avoid this problem is to assign encodeing parameter with specific value like 'utf-8' when opening the file.
-    
-    raw_text = open(os.getcwd() + os.sep + file_name, encoding='utf-8').read()
 
+    raw_text = open(os.getcwd() + os.sep + file_name, encoding='utf-8').read()
+### test
 
