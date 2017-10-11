@@ -87,7 +87,7 @@ serveral function:<br>
 `eye()` to create the identity matrix.
 an example to create random metrix:
 
-    a = np.random.rando((2,1))
+    a = np.random.random((2,1))
 
 #### Fancy slice
 See the example below, the output of this is `[1 4 5]`, which is a combination of the value in `(0,0)`, `(1,1)` and `(2,0)` position.
