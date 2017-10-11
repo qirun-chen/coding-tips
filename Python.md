@@ -78,8 +78,23 @@ for large amounts of calls to numpy function, the standard approcah to import pa
     imoprt numpy as np
 
 serveral function:
-`zeros()` is used to create an array of all zeros
-`ones` `full` `eye`
+`zeros()` is used to create an array of all zeros.
+`ones()` similar to `zeros()`, however the values inside array are all 1.
+`full()` create a  constant array. (below: an 2-rows,2-lows array with values=7)
 
+    a = np.full((2,2), 10)
+
+`eye()` to create the identity matrix.
+an example to create random metrix:
+
+    a = np.random.rando((2,1))
+
+#### Fancy slice
+See the example below, the output of this is `[1 4 5]`, which is a combination of the value in `(0,0)`, `(1,1)` and `(2,0)` position.
+
+    x = np.array([[1,2], [3,4], [5,6]])
+    x[[0,1,2],[0,1,0]]
+
+---
 
 
