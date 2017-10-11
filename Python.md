@@ -77,9 +77,9 @@ for large amounts of calls to numpy function, the standard approcah to import pa
 
     imoprt numpy as np
 
-serveral function:
-`zeros()` is used to create an array of all zeros.
-`ones()` similar to `zeros()`, however the values inside array are all 1.
+serveral function:<br>
+`zeros()` is used to create an array of all zeros.<br>
+`ones()` similar to `zeros()`, however the values inside array are all 1.<br>
 `full()` create a  constant array. (below: an 2-rows,2-lows array with values=7)
 
     a = np.full((2,2), 10)
