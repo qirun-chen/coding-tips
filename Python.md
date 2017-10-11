@@ -1,7 +1,7 @@
 ## Python tips
 
 ---
-## List 
+## List
 ### List comprehension
 
     e**2 for e in a_list if type(e) == types.Int`
@@ -50,7 +50,7 @@ Use when your program has to get access to the local files. For example, Js code
 ### dictionary comprehension
 
 like list comprehension
-    
+
     eg_dict = {k: v for k, v in eg_dict.iteritems() if v == 4}
 use `:` operator to add a pair of (key,value) into a dictionary
 
@@ -70,6 +70,16 @@ The best way to avoid this problem is to assign encodeing parameter with specifi
 
     raw_text = open(os.getcwd() + os.sep + file_name, encoding='utf-8').read()
 
---- 
-## data science with python
+---
+## Data Science with Python
+### Nmupy Array index & slice
+for large amounts of calls to numpy function, the standard approcah to import package:
+
+    imoprt numpy as np
+
+serveral function:
+`zeros()` is used to create an array of all zeros
+`ones` `full` `eye`
+
+
 
