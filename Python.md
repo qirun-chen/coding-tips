@@ -48,14 +48,16 @@ Use when your program has to get access to the local files. For example, Js code
 ---
 ## Dictionary
 ### dictionary comprehension
+
 like list comprehension
+    
     eg_dict = {k: v for k, v in eg_dict.iteritems() if v == 4}
-use ':' operator to add a pair of (key,value) into a dictionary
+use `:` operator to add a pair of (key,value) into a dictionary
 
 This syntaxtic sugar looks like a sentence in English. A pythonic way.
 
 ### has_key() or in
-Python 3 has removed has_key() of the dictionary object. Use in instead.
+Python 3 has removed `has_key()` of the dictionary object. Use `in` instead.
 
 ---
 ## I/O operations
