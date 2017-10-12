@@ -151,6 +151,9 @@ Splat gathers all elements into an array. `*`
 		p row
 	end
 
+When traversing the csv file, it is elegant to define a function and extract data to create relative objects.
+So there is no need to traverse again to get the certain data.
+
 #### Assign parameters in command-line interface
 ARGV is like an I/O splat
 
