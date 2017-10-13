@@ -144,6 +144,14 @@ Splat gathers all elements into an array. `*`
 
 	method_1(saus1, saus2, saus3)
 
+#### key parameter with a default value
+When necessary to define a method to create some objects, use key parameter to improve robustness.
+Eg.
+	
+	def create_all_albums(songs, albums = [])
+		## append song objects into albums...
+	end
+
 -------------------------------------------------------------------------------------------------------------------------------------------
 ### I/O
 #### Loading CSV
