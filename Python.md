@@ -103,5 +103,8 @@ It let tuples can be treated as `key` in dictionaires.
 
     dict = {('fan li', 1994): 10, ('qirun chen, 1994'): 20}
 
+N.B dictionaire are unordered<br>
+
+
 
 
