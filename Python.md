@@ -95,6 +95,10 @@ See the example below, the output of this is `[1 4 5]`, which is a combination o
     x = np.array([[1,2], [3,4], [5,6]])
     x[[0,1,2],[0,1,0]]
 
+### lists, tuples and dictionaires
+The main difference between list and tuples is, tuples are 'immutable', which means can never be changed.
+<br>
+It let tuples can be treated as `key` in dictionaires.
 ---
 
 
