@@ -73,3 +73,7 @@ The best way to avoid this problem is to assign encodeing parameter with specifi
 --- 
 ## data science with python
 
+### get intersection between lists, and get union of lists
+    list_1 & list_2 # intersection
+    list_1 | list_2 # union
+
