@@ -73,7 +73,11 @@ The best way to avoid this problem is to assign encodeing parameter with specifi
 --- 
 ## data science with python
 
-### get intersection between lists, and get union of lists
-    list_1 & list_2 # intersection
-    list_1 | list_2 # union
+### get intersection between sets, and get union of set
+should initialize a set with a list
+    
+    set_1 = set(list_1)
+    set_2 = set(list_2)
+    set_1 & set_2 # intersection
+    set_1 | set_2 # union
 
