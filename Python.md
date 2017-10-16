@@ -70,6 +70,35 @@ The best way to avoid this problem is to assign encodeing parameter with specifi
 
     raw_text = open(os.getcwd() + os.sep + file_name, encoding='utf-8').read()
 
+---
+## Lambda
+sometimes using lambda to write a formula is an elegant way.
+
+    sum = lambda x,y : x+y
+    print sum(2)
+
+### lambda with high order functions, filter, map, and reduce
+#### filter ---- return a list with values satisfying filter conditions
+after filtering, need to change the result(filter object) into an list object
+
+    foo = [2, 18, 9, 22, 17, 24, 8, 12, 27]
+    even_numbers = list(filter(lambda x: x % 2 == 0, foo))
+
+#### map ---- return a list with values processed by the function
+change the result into an list object as well.
+
+    result = list(map(lambda x:x**2, foo))
+
+#### reduce ---- continually apply the function to a list, and return a single value 
+since python3 has dropped reduce, we need to `from functools import reduce`
+    
+    f = lambda a,b: a if (a>b) else b
+    reduce(f, [47,11,42,102,13])
+    # get 102
+        
+    reduce(lambda x,y: x+y, [47,11,42,13])
+    # get 113
+    
 --- 
 ## data science with python
 
