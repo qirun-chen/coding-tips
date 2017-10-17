@@ -1,4 +1,4 @@
-## Python tips
+## Python tips based on Python 3.3 or later 
 
 ---
 ## List 
