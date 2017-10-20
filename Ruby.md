@@ -121,10 +121,34 @@ If split takes '//', it will split every single character into an array.
 	=> ["a", "b", "c", "d"]
 
 -------------------------------------------------------------------------------------------------------------------------------------------
+
+### hash table
+	`:first` symbol as index, `=>` arrow does mapping
+
+	>> foo = Hash.new
+	>> foo={:firtst=>"a", :second=>"b", :third=>"c", :forth=>"goo"}
+	>> foo[:first]
+	=> "a"
+
+---
 ### Blocks
 #### each
+
+>>`each` is for when you want to iterate over an array, and do whatever you want in each iteration. In most (imperative) languages, this is the "one size fits all" hammer that programmers reach for when you need to process a list.
+
+For more functional languages, you only do this sort of generic iteration if you can't do it any other way. Most of the time, either `map` or `reduce` will be more appropriate (`collect` and `inject` in ruby)
+
+`collect` is for when you want to turn one array into another array
+
+`inject` is for when you want to turn an array into a single value 
+
 	>> foo = ["qi", "qa", "quo"]
-	>> foo.each {|ele| puts ele+"e"}
+	>> foo.each {|ele| ele+"e"}			# each
+	=> ["qi", "qa", "quo"]
+	>> foo.collect {|ele| ele+"e"}		# collect
+	=> ["qie", "qae", "quoe"]
+	>> foo
+	=> ["qi", "qa", "quo"]
 
 #### select
 It is like a filter.
