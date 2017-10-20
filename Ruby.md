@@ -134,9 +134,9 @@ If split takes '//', it will split every single character into an array.
 ### Blocks
 #### each
 
->>`each` is for when you want to iterate over an array, and do whatever you want in each iteration. In most (imperative) languages, this is the "one size fits all" hammer that programmers reach for when you need to process a list.
+>`each` is for when you want to iterate over an array, and do whatever you want in each iteration. In most (imperative) languages, this is the "one size fits all" hammer that programmers reach for when you need to process a list.
 
->>For more functional languages, you only do this sort of generic iteration if you can't do it any other way. Most of the time, either `map` or `reduce` will be more appropriate (`collect` and `inject` in ruby)
+>For more functional languages, you only do this sort of generic iteration if you can't do it any other way. Most of the time, either `map` or `reduce` will be more appropriate (`collect` and `inject` in ruby)
 
 `collect` is for when you want to turn one array into another array
 
