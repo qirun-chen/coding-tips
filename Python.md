@@ -76,7 +76,7 @@ The best way to avoid this problem is to assign encodeing parameter with specifi
 
 ---
 ## iterator
-^`iterable` : list, tuple, dictionary^
+^`iterator` : list, tuple, dictionary^
 ---
 ## Generator
     line_list = ['  line 1\n', 'line 2  \n', ...]
@@ -149,7 +149,8 @@ since python3 has dropped reduce, we need to `from functools import reduce`
     d = dict(enumerate(f))
     print(d[1])
     
-
+#### sum
+    total = sum(b for a,b in items)
 --- 
 ## data science with python
 
