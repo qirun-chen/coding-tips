@@ -47,6 +47,10 @@ Use when your program has to get access to the local files. For example, Js code
 
 ---
 ## Dictionary
+The dict() constructor can accept an iterator that returns a finite stream of (key, value) tuples:
+
+    L = [('Italy', 'Rome'), ('France', 'Paris'), ('US', 'Washington DC')]
+    dict(iter(L))  
 ### dictionary comprehension
 
 like list comprehension
@@ -70,6 +74,32 @@ The best way to avoid this problem is to assign encodeing parameter with specifi
 
     raw_text = open(os.getcwd() + os.sep + file_name, encoding='utf-8').read()
 
+---
+## iterator
+^`iterable` : list, tuple, dictionary^
+---
+## Generator
+    line_list = ['  line 1\n', 'line 2  \n', ...]
+    # Generator expression -- returns iterator
+    stripped_iter = (line.strip() for line in line_list)
+Generator expressions are surrounded by parentheses (“()”) and list comprehensions are surrounded by square brackets (“[]”).
+### yield
+The big difference between yield and a return statement is that on reaching a yield the generator’s state of execution is suspended and local variables are preserved.
+
+    def generate_ints(N):
+       for i in range(N):
+           yield i
+
+    >>> gen = generate_ints(3)
+    >>> gen  
+    <generator object generate_ints at ...>
+    >>> next(gen)
+    0
+    >>> next(gen)
+    1
+    >>> next(gen)
+    2
+    >>> next(gen)
 ---
 ## Lambda
 sometimes using lambda to write a formula is an elegant way.
@@ -98,7 +128,28 @@ since python3 has dropped reduce, we need to `from functools import reduce`
         
     reduce(lambda x,y: x+y, [47,11,42,13])
     # get 113
+
+#### enumerate
+`enumerate(iter, start=0)` counts off the elements in the iterable returning 2-tuples containing the count (from start) and each element.
+
+    >>> for item in enumerate(['subject', 'verb', 'object']):
+    ...     print(item)
+    (0, 'subject')
+    (1, 'verb')
+    (2, 'object')
+
+`enumerate()` is often used when looping through a list and recording the indexes at which certain conditions are met:
+
+    f = open('data.txt', 'r')
+    for i, line in enumerate(f):
+        if line.strip() == '':
+            print('Blank line at line #%i' % i)
+    # or we can easily get a line by the number
+    f = open('data.txt', 'r')
+    d = dict(enumerate(f))
+    print(d[1])
     
+
 --- 
 ## data science with python
 
