@@ -144,7 +144,7 @@ since python3 has dropped reduce, we need to `from functools import reduce`
     for i, line in enumerate(f):
         if line.strip() == '':
             print('Blank line at line #%i' % i)
-    # or we can easily get a line by the number
+    # or we can easily get a line according the index
     f = open('data.txt', 'r')
     d = dict(enumerate(f))
     print(d[1])
