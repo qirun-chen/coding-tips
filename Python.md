@@ -182,8 +182,7 @@ How iter() works for custom objects?
     # print '3'
     print(next(printNumIter))
 
-
-
+## Decorators
 
 --- 
 ## data science with python
