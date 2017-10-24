@@ -151,6 +151,40 @@ since python3 has dropped reduce, we need to `from functools import reduce`
     
 #### sum
     total = sum(b for a,b in items)
+
+## iter()
+The iter() method returns iterator object for the given object that loops through each element in the object.
+How iter() works for custom objects?
+
+    class PrintNumber:
+        def __init__(self, max):
+            self.max = max
+
+        def __iter__(self):
+            self.num = 0
+            return self
+
+        def __next__(self):
+            if(self.num >= self.max):
+                raise StopIteration
+            self.num += 1
+            return self.num
+
+    printNum = PrintNumber(3)
+    printNumIter = iter(printNum)
+
+    # print '1'
+    print(next(printNumIter))
+
+    # print '2'
+    print(next(printNumIter))
+
+    # print '3'
+    print(next(printNumIter))
+
+
+
+
 --- 
 ## data science with python
 
