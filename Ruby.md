@@ -1,5 +1,25 @@
 ## Ruby tips
 
+### Module 
+A module is actually a abstract class which cannot be intitialzed.
+
+#### common modules
+##### Comparable
+include `Comparable` module in a class, and overwrite `def <=>()` method, so the object of the class can compare each other.
+`<=>` implement the conventional comparision operators (`<`, `<=`, `==`, `>=`, and `>`) and the method `between?`.
+
+	class SizeMatters
+		include Comparabel
+		attr :str
+		def <=>(another)
+			str.size <=> another.str.size
+		end
+		def initialize(str)
+			@str = str
+		end
+	end
+
+
 ### Assign multiple variables
 	a, b, c = row[0], row[1], row[2]
 
