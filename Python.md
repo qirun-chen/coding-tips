@@ -63,7 +63,7 @@ This syntaxtic sugar looks like a sentence in English. A pythonic way.
 ### has_key() or in
 Python 3 has removed `has_key()` of the dictionary object. Use `in` instead.
 
-### find the key with the maximum in the dictionary
+### find the key with the maximum
     mydict = {'A':4,'B':10,'C':0,'D':87}
     maximum = max(mydict, key=mydict.get)  # Just use 'min' instead of 'max' for minimum.
     print(maximum, mydict[maximum])
