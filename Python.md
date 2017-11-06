@@ -1,5 +1,37 @@
 ## Python tips based on Python 3.3 or later 
 
+## `*arg, **kwargs`
+`*args` is used to send a non-keyworded variable length argument list to the function.
+`**kwargs` allows you to pass keyworded variable length of arguments to a function.
+
+    def greet_me(**kwargs):
+        if kwargs is not None:  # 
+            for key, value in kwargs.iteritems():
+                print "%s == %s" %(key,value)
+    >>> greet_me(name="yasoob")
+    name == yasoob
+
+    def test_args_kwargs(arg1, arg2, arg3):
+        print "arg1:", arg1
+        print "arg2:", arg2
+        print "arg3:", arg3    
+    # first with *args
+    >>> args = ("two", 3,5)
+    >>> test_args_kwargs(*args)
+    arg1: two
+    arg2: 3
+    arg3: 5
+    # now with **kwargs:
+    >>> kwargs = {"arg3": 3, "arg2": "two","arg1":5}
+    >>> test_args_kwargs(**kwargs)
+    arg1: 5
+    arg2: two
+    arg3: 3     
+
+So if you want to use all three of these in functions then the order is
+
+    some_func(fargs,*args,**kwargs)
+
 ---
 ## List 
 ### List comprehension
@@ -189,7 +221,32 @@ How iter() works for custom objects?
     print(next(printNumIter))
 
 ## Decorators
+We will use the `*args` and `**kwargs` notation to write decorators which can cope with functions with an arbitrary number of positional and keyword parameters.
 
+    def call_counter(func):
+    def helper(*args, **kwargs):
+        helper.calls += 1
+        return func(*args, **kwargs)
+    helper.calls = 0
+    return helper
+    #
+    @call_counter
+    def succ(x):
+        return x + 1
+    #
+    @call_counter
+    def mul1(x, y=1):
+        return x*y + 1
+    #
+    print(succ.calls)
+    for i in range(10):
+        succ(i)
+    mul1(3, 4)
+    mul1(4)
+    mul1(y=3, x=2)
+        
+    print(succ.calls)
+    print(mul1.calls)
 --- 
 ## data science with python
 
