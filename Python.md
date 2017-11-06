@@ -1,11 +1,11 @@
 ## Python tips based on Python 3.3 or later 
 
 ## `*arg, **kwargs`
-`*args` is used to send a non-keyworded variable length argument list to the function.
-`**kwargs` allows you to pass keyworded variable length of arguments to a function.
+`*args` is used to send a non-keyworded variable length of argument list to the function. 
+`**kwargs` allows you to pass keyworded variable length arguments to a function. (keyword variables => list, dict)
 
     def greet_me(**kwargs):
-        if kwargs is not None:  # 
+        if kwargs is not None:   
             for key, value in kwargs.iteritems():
                 print "%s == %s" %(key,value)
     >>> greet_me(name="yasoob")
@@ -15,12 +15,14 @@
         print "arg1:", arg1
         print "arg2:", arg2
         print "arg3:", arg3    
+
     # first with *args
     >>> args = ("two", 3,5)
     >>> test_args_kwargs(*args)
     arg1: two
     arg2: 3
     arg3: 5
+
     # now with **kwargs:
     >>> kwargs = {"arg3": 3, "arg2": "two","arg1":5}
     >>> test_args_kwargs(**kwargs)
@@ -219,7 +221,7 @@ How iter() works for custom objects?
 
     # print '3'
     print(next(printNumIter))
-
+---
 ## Decorators
 We will use the `*args` and `**kwargs` notation to write decorators which can cope with functions with an arbitrary number of positional and keyword parameters.
 
@@ -229,15 +231,15 @@ We will use the `*args` and `**kwargs` notation to write decorators which can co
         return func(*args, **kwargs)
     helper.calls = 0
     return helper
-    #
-    @call_counter
+    
+    @call_counter   # @ must on the line before the definition of the function 
     def succ(x):
         return x + 1
-    #
+    
     @call_counter
     def mul1(x, y=1):
         return x*y + 1
-    #
+    
     print(succ.calls)
     for i in range(10):
         succ(i)
@@ -247,6 +249,43 @@ We will use the `*args` and `**kwargs` notation to write decorators which can co
         
     print(succ.calls)
     print(mul1.calls)
+
+    output: 
+    0
+    10
+    3
+
+or decorate build-in functions:
+
+from random import random, randint, choice
+
+    def our_decorator(func):
+        def function_wrapper(*args, **kwargs):
+            print("Before calling " + func.__name__)
+            res = func(*args, **kwargs)
+            print(res)
+            print("After calling " + func.__name__)
+        return function_wrapper
+
+    random = our_decorator(random)            # cannot use @, its a build-in functions
+    randint = our_decorator(randint)
+    choice = our_decorator(choice)
+
+    random()
+    randint(3, 8)
+    choice([4, 5, 6])    
+
+The result looks as expected:    
+
+    Before calling random
+    0.16420183945821654
+    After calling random
+    Before calling randint
+    8
+    After calling randint
+    Before calling choice
+    5
+    After calling choice
 --- 
 ## data science with python
 
