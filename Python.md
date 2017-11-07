@@ -225,12 +225,34 @@ How iter() works for custom objects?
 ## Decorators
 We will use the `*args` and `**kwargs` notation to write decorators which can cope with functions with an arbitrary number of positional and keyword parameters.
 
+#### Checking Arguments with a Decorator
+    def argument_test_natural_number(f):
+        def helper(x):
+            if type(x) == int and x > 0:
+                return f(x)
+            else:
+                raise Exception("Argument is not an integer")
+        return helper
+        
+    @argument_test_natural_number
+    def factorial(n):
+        if n == 1:
+            return 1
+        else:
+            return n * factorial(n-1)
+
+    for i in range(1,10):
+        print(i, factorial(i))
+
+    print(factorial(-1))
+
+#### Counting Function Calls with Decorators
     def call_counter(func):
-    def helper(*args, **kwargs):
-        helper.calls += 1
-        return func(*args, **kwargs)
-    helper.calls = 0
-    return helper
+        def helper(*args, **kwargs):
+            helper.calls += 1
+            return func(*args, **kwargs)
+        helper.calls = 0
+        return helper
     
     @call_counter   # @ must on the line before the definition of the function 
     def succ(x):
@@ -257,7 +279,7 @@ We will use the `*args` and `**kwargs` notation to write decorators which can co
 
 or decorate build-in functions:
 
-from random import random, randint, choice
+    from random import random, randint, choice
 
     def our_decorator(func):
         def function_wrapper(*args, **kwargs):
