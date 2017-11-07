@@ -134,11 +134,21 @@ Use concat to append a substring to the end of the string, and it will do assign
 	>> str
 	=> "foobar"
 
-#### Split
+#### split
 If split takes '//', it will split every single character into an array.
 
 	>> "abcd".split(//)
 	=> ["a", "b", "c", "d"]
+
+#### gsub
+replace the substring with a certain substring, and then return a new replaced string not the original one.
+	
+	> a = "aabaa"
+	=> "aabaa"
+	> a.gsub("b", "c")
+	=> "aacaa"
+	> a
+	=> "aabaa"
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -194,6 +204,13 @@ Eg.
 	
 	def create_all_albums(songs, albums = [])
 		## append song objects into albums...
+	end
+
+#### Exception
+	begin
+		doc = open(uri, :allow_redirections => :safe)
+	rescue OpenURI::HTTPError => the_error
+		puts "Error, found bad status code: #{the_error}"
 	end
 
 -------------------------------------------------------------------------------------------------------------------------------------------
