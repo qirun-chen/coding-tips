@@ -51,6 +51,17 @@ predicate: `if type(e) == types.Int`
 	str1 = ''.join(list1)
 	str1 = ''.join(str(e) for e in list1)
 
+### slice
+For slicing a list 
+    
+    x = [1,2,3,4,5,6,7]
+    x[2:4]
+    #
+    [3,4]
+
+In this case, the left number of `:` is the start index number and the right number means 'up to', not a index, so it is up to 4 numbers (1,2,3,4).
+
+
 ---
 ## String
 ### Formularize print
